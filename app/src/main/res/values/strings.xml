@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Virtual Reality Lab</string>
+
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+    <string name="enter_vr_label">Enter VR mode</string>
+    <string name="exit_vr_label">Exit VR mode</string>
+    <string name="pause_label">Pause video</string>
+    <string name="play_label">Play video</string>
+    <string name="url_hint">360 Video/Image Url</string>
+    <string name="loop_hint">Enable Video Looping</string>
+</resources>
