@@ -5,25 +5,27 @@
 
     <item
         android:id="@+id/load_video"
-        android:title="Load Vr Video"/>
+        android:title="Load Vr Video"
+        android:tooltipText="@string/load_video_hint"/>
     <item
         android:id="@+id/load_pic"
-        android:title="Load Vr Image"/>
+        android:title="Load Vr Image"
+        android:tooltipText="@string/load_image_hint"/>
     <item
         android:id="@+id/load_url"
-        android:title="Load From Url"/>
+        android:title="Load From Url"
+        android:tooltipText="@string/load_url_hint"/>
     <item
         android:id="@+id/home"
         android:icon="@drawable/home_5_24"
-        app:showAsAction="ifRoom"
-        android:title="GoHome">
-    </item>
+        android:title="@string/home_hint"
+        app:showAsAction="ifRoom"/>
     <item
         android:id="@+id/switch_bar_loop"
-        android:title="Switch"
-        android:hint="@string/loop_hint"
+        android:title="@string/loop_video_hint"
+        android:tooltipText="@string/loop_video_hint"
         app:actionLayout="@layout/switch_item"
-        app:showAsAction="always"
+        app:showAsAction="ifRoom"
         app:actionViewClass="android.widget.Switch">
     </item>
 </menu>

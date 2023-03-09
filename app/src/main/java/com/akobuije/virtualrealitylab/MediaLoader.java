@@ -154,7 +154,7 @@ public class MediaLoader {
   }
 
   /**
-   * Nonso: Duplication of hanaleIntent Method with out Vidwo UI Loadeing
+   * Nonso: Duplication of hanaleIntent Method with out Video UI Loading
    */
   public void handleIntent(Intent intent) {
     // Load the bitmap in a background thread to avoid blocking the UI thread. This operation can
@@ -228,7 +228,8 @@ public class MediaLoader {
 
         if (type == null){
           if (uri.getPath().contains(MediaTypes.video.toString()) ||
-          uri.toString().contains("resource://com.akobuije.virtualrealitylab/")) {
+          uri.toString().contains("resource://com.akobuije.virtualrealitylab/") ||
+          uri.toString().contains("youtube")) {
             type = MediaTypes.video.toString();
           } else if (uri.getPath().contains(MediaTypes.image.toString())) {
             type = MediaTypes.image.toString();

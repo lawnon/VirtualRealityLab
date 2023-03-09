@@ -158,6 +158,7 @@ public final class MonoscopicView extends GLSurfaceView {
    * Parses the Intent and loads the appropriate media.
    */
   public void loadMedia(Intent intent) {
+    uiView.ResetUiUpdater();
     mediaLoader.handleIntent(intent, uiView);
   }
 

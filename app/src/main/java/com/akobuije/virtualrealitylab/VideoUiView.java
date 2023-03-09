@@ -1,4 +1,4 @@
-/*
+/**
  * Copyright 2017 Google Inc. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
@@ -59,6 +59,7 @@ public class VideoUiView extends LinearLayout {
   // main thread.
   @Nullable
   private MediaPlayer mediaPlayer;
+
   // The canvasQuad is only not null when this View is in a VR Activity. It provides the backing
   // canvas that standard Android child Views render to.
   @Nullable
@@ -89,7 +90,8 @@ public class VideoUiView extends LinearLayout {
     parent.addView(view, 0);
 
     view.findViewById(R.id.enter_exit_vr).setContentDescription(
-        view.getResources().getString(R.string.exit_vr_label));
+            view.getResources().getString(R.string.exit_vr_label)
+    );
 
     return view;
   }
@@ -158,26 +160,29 @@ public class VideoUiView extends LinearLayout {
 
     final ImageButton playPauseToggle = (ImageButton) findViewById(R.id.play_pause_toggle);
     playPauseToggle.setOnClickListener(
-        new OnClickListener() {
-          @Override
-          public void onClick(View v) {
-            if (mediaPlayer == null) {
-              return;
-            }
-
-            if (mediaPlayer.isPlaying()) {
-              mediaPlayer.pause();
-              playPauseToggle.setBackgroundResource(R.drawable.play_button);
-              playPauseToggle.setContentDescription(getResources().getString(R.string.play_label));
-            } else {
-              mediaPlayer.start();
-              playPauseToggle.setBackgroundResource(R.drawable.pause_button);
-              playPauseToggle.setContentDescription(getResources().getString(R.string.pause_label));
-            }
+      new OnClickListener() {
+        @Override
+        public void onClick(View v) {
+          if (mediaPlayer == null) {
+            return;
           }
-        });
+
+          if (mediaPlayer.isPlaying()) {
+            mediaPlayer.pause();
+            playPauseToggle.setBackgroundResource(R.drawable.play_button);
+            playPauseToggle.setContentDescription(getResources().getString(R.string.play_label));
+            playPauseToggle.setTooltipText(getResources().getString(R.string.play_label));
+          } else {
+            mediaPlayer.start();
+            playPauseToggle.setBackgroundResource(R.drawable.pause_button);
+            playPauseToggle.setContentDescription(getResources().getString(R.string.pause_label));
+            playPauseToggle.setTooltipText(getResources().getString(R.string.pause_label));
+          }
+        }
+      });
 
     seekBar = (SeekBar) findViewById(R.id.seek_bar);
+    seekBar.setTooltipText(getResources().getString(R.string.seeker_bar));
     seekBar.setOnSeekBarChangeListener(new SeekBarListener());
 
     statusText = (TextView) findViewById(R.id.status_text);
@@ -231,9 +236,16 @@ public class VideoUiView extends LinearLayout {
     return uiUpdater;
   }
 
+  /**
+   * Nonso: Custom Procedure for reseting Statusbar Data
+   */
+  public void ResetUiUpdater(){
+    uiUpdater.videoDurationMs = 0;
+  }
+
   /** Updates the seek bar and status text. */
   private final class UiUpdater implements OnFrameAvailableListener {
-    private int videoDurationMs = 0;
+    public int videoDurationMs = 0;
 
     // onFrameAvailable is called on an arbitrary thread, but we can only access mediaPlayer on the
     // main thread.

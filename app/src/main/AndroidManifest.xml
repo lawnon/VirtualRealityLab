@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest
     xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.akobuije.virtualrealitylab">
+    package="com.akobuije.virtualrealitylab"
+    android:versionCode="8"
+    android:versionName="Virtual Reality Lab">
 
     <!-- The VR app is Daydream-only since it uses the controller. -->
 
@@ -9,8 +11,6 @@
 
     <uses-feature android:name="android.hardware.sensor.accelerometer" android:required="true"/>
     <uses-feature android:name="android.hardware.sensor.gyroscope" android:required="true"/>
-    <uses-feature android:name="android.hardware.vr.high_performance" android:required="true"/>
-    <uses-feature android:name="android.software.vr.mode" android:required="true"/>
 
     <uses-permission android:name="android.permission.INTERNET"/>
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
@@ -26,9 +26,9 @@
         <activity
             android:name=".VrLabActivity"
             android:configChanges="orientation|keyboardHidden|screenSize"
-            android:label="@string/app_name"
             android:theme="@style/FullscreenTheme"
-            android:screenOrientation="portrait">
+            android:screenOrientation="portrait"
+            android:exported="true">
 
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

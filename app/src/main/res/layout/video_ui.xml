@@ -13,14 +13,16 @@
         android:layout_width="48dp"
         android:layout_height="match_parent"
         android:background="@android:drawable/ic_media_pause"
-        android:contentDescription="@string/pause_label" />
+        android:contentDescription="@string/pause_label"
+        android:tooltipText="@string/pause_label"/>
 
     <SeekBar
         android:id="@+id/seek_bar"
-        style="?android:attr/progressBarStyleHorizontal"
         android:layout_width="0dp"
         android:layout_height="match_parent"
-        android:layout_weight="8" />
+        android:layout_weight="8"
+        android:tooltipText="@string/seeker_bar"
+        style="?android:attr/progressBarStyleHorizontal"/>
 
     <TextView
         android:id="@+id/status_text"
@@ -39,5 +41,7 @@
         android:layout_width="48dp"
         android:layout_height="match_parent"
         android:background="@drawable/enter_vr"
-        android:contentDescription="@string/enter_vr_label" />
+        android:contentDescription="@string/enter_vr_label"
+        android:tooltipText="@string/enter_vr_label"/>
+
 </com.akobuije.virtualrealitylab.VideoUiView>

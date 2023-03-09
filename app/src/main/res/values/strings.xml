@@ -1,12 +1,16 @@
 <resources>
     <string name="app_name">Virtual Reality Lab</string>
 
-    <string name="dummy_button">Dummy Button</string>
-    <string name="dummy_content">DUMMY\nCONTENT</string>
-    <string name="enter_vr_label">Enter VR mode</string>
-    <string name="exit_vr_label">Exit VR mode</string>
-    <string name="pause_label">Pause video</string>
-    <string name="play_label">Play video</string>
-    <string name="url_hint">360 Video/Image Url</string>
-    <string name="loop_hint">Enable Video Looping</string>
+    <string name="enter_vr_label">Enter VR Mode</string>
+    <string name="exit_vr_label">Exit VR Mode</string>
+    <string name="pause_label">Pause Video</string>
+    <string name="play_label">Play Video</string>
+    <string name="seeker_bar">Video Timeline</string>
+
+    <string name="load_url_hint">360 Video/Image Url</string>
+    <string name="loop_video_hint">Enable Video Looping</string>
+    <string name="load_video_hint">Load 360° Video</string>
+    <string name="load_image_hint">Load 360° Image</string>
+    <string name="home_hint">Go to Home View</string>
+    <string name="toggle_menu_hint">Toggle Menu Visibility</string>
 </resources>

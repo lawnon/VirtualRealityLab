@@ -1,15 +1,23 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 29
-    buildToolsVersion "29.0.3"
+    signingConfigs {
+        debug {
+            storeFile file('D:\\Projects\\Dev\\Android\\APK_KEYS\\GooglePlayKey.jks')
+            storePassword 'kakachizzy88'
+            keyPassword 'kakachizzy88'
+            keyAlias 'VirtualRealityLabkey0'
+        }
+    }
+    compileSdk 33
 
     defaultConfig {
         applicationId "com.akobuije.virtualrealitylab"
-        minSdkVersion 21
-        targetSdkVersion 29
-        versionCode 1
-        versionName "1.0"
+        minSdk 25
+        targetSdk 33
+        versionCode 8
+        versionName 'Virtual Reality Lab'
+        ndk.abiFilters 'armeabi-v7a','arm64-v8a'
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
@@ -28,10 +36,10 @@ dependencies {
 
     implementation 'com.google.vr:sdk-base:1.190.0'
 
-    implementation 'androidx.appcompat:appcompat:1.1.0'
+    implementation 'androidx.appcompat:appcompat:1.6.1'
     implementation 'androidx.legacy:legacy-support-v4:1.0.0'
-    testImplementation 'junit:junit:4.12'
-    androidTestImplementation 'androidx.test.ext:junit:1.1.1'
-    androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
-    implementation 'com.google.android.material:material:1.1.0'
+    testImplementation 'junit:junit:4.13.2'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.5'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
+    implementation 'com.google.android.material:material:1.8.0'
 }

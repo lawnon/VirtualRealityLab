@@ -1,0 +1,20 @@
+/**************************************************************************************************/
+Project:  Virtual Reality Lab (360 Video) Version 0.1
+Auto: Chukwunonso Bob-Anyeji
+Date: 29.06.2022
+/**************************************************************************************************/
+
+Todo: General
+    > Add Discription Tooltips to each Visible Control. (Done)
+    > Edit Seeker bar meta Data with respect to Video Lenght and Actual Position (Done)
+    > Enabel Card View View of 360 Videos. (Discarded, needs seprate Implementation in Seprate Vr App)
+    > Update Android and Gradle Dependencies. (Done)
+    > Optimize/Refactor Search Dialoge
+        > Set Default Path to "https://www.youtube.com/results?search_query=%23360video"
+        > Load Sperate Search layout with List View Icon of 360° Videos
+    > Enable Video Cycle Button for Default Video.
+    > Set Default View to Youtube ???? or maybe not
+    > Releaser Free Version of Software on the Goolgle Play Store
+
+Todo: Bugfixes
+    > Video Shakes on Loading, refactor delayHide. (DONE)

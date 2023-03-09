@@ -2,6 +2,7 @@
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#0099cc"
@@ -20,15 +21,18 @@
         android:visibility="visible"
         android:theme="@style/FullscreenTheme" />
 
+    <!-- Floating Action Button for Toggling Visibility of Menu Controls -->
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/floating_control"
+        android:tooltipText="@string/toggle_menu_hint"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center|end"
         android:layout_margin="16dp"
         android:theme="@style/FullscreenTheme"
         android:backgroundTint="@android:color/transparent"
-        android:src="@android:drawable/btn_radio"/>
+        android:src="@android:drawable/btn_radio"
+        android:text="@string/toggle_menu_hint"/>
 
     <!-- This FrameLayout insets its children based on system windows using
          android:fitsSystemWindows. -->
@@ -65,14 +69,16 @@
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:hint="@string/url_hint"/>
+            android:hint="@string/load_url_hint"
+            android:text="https://cdnb.artstation.com/p/assets/images/images/043/572/299/large/guillermo-martinez-blue-hanguing-gardens.jpg"/>
+            <!--android:text="https://mediaplatstorage1.blob.core.windows.net/windows-universal-samples-media/SampleVideo.mp4"-->
 
         <ImageButton
             android:id="@+id/bt_get_url"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="top|end"
-            android:contentDescription="@string/url_hint"
+            android:contentDescription="@string/load_url_hint"
             app:srcCompat="@android:drawable/stat_sys_download" />
     </com.google.android.material.textfield.TextInputLayout>
 </FrameLayout>
