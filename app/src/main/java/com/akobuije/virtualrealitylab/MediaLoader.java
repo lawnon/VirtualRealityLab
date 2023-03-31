@@ -16,7 +16,6 @@
 
 package com.akobuije.virtualrealitylab;
 
-import android.content.ContentResolver;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.Bitmap;
@@ -36,13 +35,10 @@ import androidx.annotation.MainThread;
 import com.akobuije.virtualrealitylab.rendering.Mesh;
 import com.akobuije.virtualrealitylab.rendering.SceneRenderer;
 
-import java.io.File;
 import java.io.FileDescriptor;
 import java.io.FileNotFoundException;
-import java.io.IOException;
 import java.net.URLConnection;
 import java.security.InvalidParameterException;
-import java.util.stream.Stream;
 
 /**
  * MediaLoader takes an Intent from the user and loads the specified media file.

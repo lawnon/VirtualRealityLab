@@ -5,14 +5,12 @@ import android.annotation.SuppressLint;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.content.ComponentName;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.Handler;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.MotionEvent;
 import android.view.View;
 import android.widget.CompoundButton;
 import android.widget.ImageButton;
@@ -23,9 +21,6 @@ import androidx.core.app.ActivityCompat;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.textfield.TextInputLayout;
-import com.google.vr.ndk.base.DaydreamApi;
-
-import com.akobuije.virtualrealitylab.rendering.Mesh;
 
 /**
  * An example full-screen activity that shows and hides the system UI (i.e.
